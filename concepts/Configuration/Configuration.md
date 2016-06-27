@@ -7,23 +7,23 @@ While Sails dutifully adheres to the philosophy of [convention-over-configuratio
 Sails apps can be [configured programmatically](https://github.com/mikermcneil/sails-generate-new-but-like-express/blob/master/templates/app.js#L15), by specifying [environment variables](http://en.wikipedia.org/wiki/Environment_variable) or command-line arguments, by changing the local or global [`.sailsrc` files](http://sailsjs.org/documentation/anatomy/myApp/sailsrc.html), or (most commonly) using the boilerplate configuration files conventionally located in the [`config/`](http://sailsjs.org/documentation/anatomy/myApp/config) folder of new projects. The authoritative, merged-together configuration used in your app is available at runtime on the `sails` global as `sails.config`.
 
 
-### Standard configuration files (`config/*`)
+### Arquivos de configurações padrões (`config/*`)
 
-A number of configuration files are generated in new Sails apps by default.  These boilerplate files include a number of inline comments, which are designed to provide a quick, on-the-fly reference without having to jump back and forth between the docs and your text editor.
+Vários arquivos de configurações são gerados por padrão nos app Sails. Estes arquivos incluem várias linhas de comentário, os quais provém uma referência de acesso rápido a documentação, sem que você precise navegar pra frente e para trás no seu editor de textos.
 
-In most cases, the top-level keys on the `sails.config` object (e.g. `sails.config.views`) correspond to a particular configuration file (e.g. `config/views.js`) in your app; however configuration settings may be arranged however you like across the files in your `config/` directory.  The important part is the name (i.e. key) of the setting- not the file it came from.
+Na maioria dos casos, as chaves de alto nível no objeto `sails.config` (ex. `sails.config.views`) correspondem a um arquivo de configuração (ex. `config/views.js`) no app; quaisquer configurações podem ser organizadas da forma que desejar, através dos arquivos contidos no diretório `config/`. O importante aqui é o nome da configuração, não o nome do arquivo.
 
-For instance, let's say you add a new file, `config/foo.js`:
+Por exemplo, vamos dizer que tu adicionou o arquivo `config/foo.js`:
 
 ```js
 // config/foo.js
-// The object below will be merged into `sails.config.blueprints`:
+// o objeto abaixo estará contigo em `sails.config.blueprints`:
 module.exports.blueprints = {
   shortcuts: false
 };
 ```
 
-For an exhaustive reference of individual configuration options, and the file they live in by default, check out the reference pages in this section, or take a look at ["`config/`"](http://sailsjs.org/documentation/anatomy/myApp/config) in [The Anatomy of a Sails App](http://sailsjs.org/documentation/anatomy) for a higher-level overview.
+Para uma referência completa de cada opção de configuração e o arquivo onde estão, confira a página de referência nessa seção, ou dê uma olhada em ["`config/`"](http://sailsjs.org/documentation/anatomy/myApp/config) dentro da [Anatomia de um app Sails](http://sailsjs.org/documentation/anatomy) para uma visão geral de alto nível.
 
 ### Environment-specific files (`config/env/*`)
 
